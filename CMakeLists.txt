@@ -7,7 +7,7 @@ project(
     # targets (e.g., library, executable, etc.).
     DESCRIPTION "A Beman Library Exemplar"
     LANGUAGES CXX
-    VERSION 2.1.1
+    VERSION 2.2.1
 )
 
 # [CMAKE.SKIP_TESTS]
@@ -21,12 +21,6 @@ option(
 option(
     BEMAN_EXEMPLAR_BUILD_EXAMPLES
     "Enable building examples. Default: ${PROJECT_IS_TOP_LEVEL}. Values: { ON, OFF }."
-    ${PROJECT_IS_TOP_LEVEL}
-)
-
-option(
-    BEMAN_EXEMPLAR_INSTALL_CONFIG_FILE_PACKAGE
-    "Enable creating and installing a CMake config-file package. Default: ${PROJECT_IS_TOP_LEVEL}. Values: { ON, OFF }."
     ${PROJECT_IS_TOP_LEVEL}
 )
 
