@@ -24,6 +24,9 @@ option(
     ${PROJECT_IS_TOP_LEVEL}
 )
 
+# for find of beman-install-library
+set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/infra/cmake)
+
 add_subdirectory(src/beman/{{cookiecutter.project_name}})
 
 if(BEMAN_{{cookiecutter.project_name.upper()}}_BUILD_TESTS)
