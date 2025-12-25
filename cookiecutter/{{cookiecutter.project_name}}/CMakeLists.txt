@@ -1,13 +1,13 @@
 # SPDX-License-Identifier: Apache-2.0 WITH LLVM-exception
 
-cmake_minimum_required(VERSION 3.25)
+cmake_minimum_required(VERSION 3.28...4.2)
 
 project(
     beman.{{cookiecutter.project_name}} # CMake Project Name, which is also the name of the top-level
     # targets (e.g., library, executable, etc.).
     DESCRIPTION "{{cookiecutter.description}}"
     LANGUAGES CXX
-    VERSION 2.2.1
+    VERSION 0.1.0
 )
 
 # [CMAKE.SKIP_TESTS]
@@ -24,11 +24,10 @@ option(
     ${PROJECT_IS_TOP_LEVEL}
 )
 
-include(CTest)
-
 add_subdirectory(src/beman/{{cookiecutter.project_name}})
 
 if(BEMAN_{{cookiecutter.project_name.upper()}}_BUILD_TESTS)
+    enable_testing()
     add_subdirectory(tests/beman/{{cookiecutter.project_name}})
 endif()
 
