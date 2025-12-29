@@ -25,7 +25,7 @@ option(
 )
 
 # for find of beman-install-library
-set(CMAKE_PREFIX_PATH ${CMAKE_CURRENT_SOURCE_DIR}/infra/cmake)
+include(infra/cmake/beman-install-library-config.cmake)
 
 add_subdirectory(src/beman/exemplar)
 
