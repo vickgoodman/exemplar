@@ -8,7 +8,10 @@
 disabled_rules:
   - readme.title
 {% else %}
-disabled_rules: []
+# TODO: These rules are temporarily disabled for fresh new libraries. Please fix and enable them afterwards.
+disabled_rules:
+  - readme.implements
+  - release.godbolt_trunk_version
 {% endif %}
 ignored_paths:
   - infra/
